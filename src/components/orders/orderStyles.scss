@@ -1,0 +1,47 @@
+@use "../../sassSheets/variables";
+body{
+    box-sizing: border-box;
+}
+
+.order-window {
+
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 90%;
+    max-width: 600px;
+    font-size: 1.2rem;
+    padding: 2%;
+
+    h2{
+        margin: 0;
+        text-align: center;
+    }
+
+    .button-holder{
+        display: flex;
+        justify-content: center;
+    }
+
+    .order-holder{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 5px;
+
+
+        .tag{
+            flex: 0 0 40%;
+        }
+        .value{
+            flex: 0 0 60%;
+        }
+    }
+
+    .search-form{
+        input{
+            margin: 8px;
+            font-size: 1.1rem;
+        }
+    }
+    
+}

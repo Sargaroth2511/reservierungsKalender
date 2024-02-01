@@ -1,0 +1,181 @@
+@use "../../sassSheets/variables";
+
+.red-text{
+    color: variables.$alarmingred;
+}
+
+.light-blue{
+    background-color: variables.$lightblue;
+}
+
+.light-grey{
+    background-color: variables.$primarygrey;
+}
+
+.reservation-popup{
+    width: 98%;
+    max-width: 400px;
+    display: flex;
+    flex-flow: column wrap;
+    background-color: rgb(181, 213, 228);
+
+    h3{
+        margin: 0;
+        padding: 2%;
+    }
+
+    h4{
+        margin: 0;
+    }
+
+    h3 span{
+        float: right;
+    }
+
+
+    .reserved-items{
+        padding: 2%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+
+        div{
+            flex-basis: 50%;
+        }
+        
+ 
+       
+    }
+
+    .reservation-button{
+        margin: 10px 5px 5px;
+        align-self: flex-end;
+        
+    }
+
+    .form-container{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+        top:0;
+        background-color: rgba(0, 0, 0, 0.26);
+        z-index: 3;
+    }
+
+    .reservation-form{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        max-width: 400px;
+        height: fit-content;
+
+        h3{
+            align-self: center;
+        }
+
+        & >button{
+            width: 8vw;
+            // height: 8vw;
+            max-width: 60px;
+            // max-height: 60px;
+            margin: 3px;
+            align-self: flex-end;
+            // border: 1px solid gray;
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .break{
+            height: 0;
+            flex-basis: 100%;
+        }
+
+        div{
+            padding: 3px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1rem;
+
+            select{
+                font-size: 1rem;
+                width: 70%;
+            }
+
+            .select-field{
+                width: 100%;
+                justify-content: flex-end;
+            }
+        }
+        
+
+        .equipmentNumber{
+            justify-content: flex-end;
+            width:  60%;
+
+            input{
+                width:  50%;
+            }
+        }
+
+        input[type=submit]{
+            margin-top: 10px;
+            align-self: flex-start;
+        }
+    }
+}
+
+.no-conflict{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 40%;
+    width: 50%;
+    // min-width: fit-content;
+    max-width: 400px;
+    background-color: white;
+
+    div{
+        font-size: 1.1rem;
+        margin: 5px;
+    }
+    button{
+        border-radius: 5px;
+        width: 60%;
+        max-width: 150px;
+        margin: 5px;
+        align-self: center;
+    }
+
+    .confirm{
+        padding: 2%;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 80%;
+        height: 80%;
+        background-color: white;
+
+        div{
+            display: flex;
+            justify-content: space-between;
+        }
+        button{
+            width: 40%;
+
+        }
+    }
+}
+
